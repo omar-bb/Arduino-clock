@@ -27,6 +27,8 @@ void setup() {
 
 	rtc.begin();
 
+	rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+
 	pinMode(LEDARRAY_D, OUTPUT); 
 	pinMode(LEDARRAY_C, OUTPUT);
 	pinMode(LEDARRAY_B, OUTPUT);
