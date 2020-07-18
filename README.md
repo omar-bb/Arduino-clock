@@ -1,4 +1,4 @@
-# Arduino-clock ![Progress Status](https://img.shields.io/badge/progress-complete-brightgreen) ![Version Status](https://img.shields.io/badge/version-1.0.0-green)
+# Arduino-clock ![Build Status](https://img.shields.io/badge/build-passing-brightgreen) ![Version Status](https://img.shields.io/badge/version-v1.0.0-green)
 
 An arduino clock with a 16x64 matrix and a DS3231 For Pi
 
