@@ -19,7 +19,7 @@ void GetTime(char* sinput, RTC_DS3231 rtcSens) {
 void TimeToHex(char sinput[9], unsigned char* wordout, const unsigned char refTemp[11][16]) {
     
     int counter = 0;
-    int i = 0;
+    int ipos = 0;
 
 	for (int x = 0; x < 8; x++) {
 
