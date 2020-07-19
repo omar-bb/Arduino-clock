@@ -77,9 +77,7 @@ Click on the upload button to upload the sketch into the Arduino
 
 > The following explanation was taken from the official documentation.
 
-##### upload_port
-
-Type: `String (Pattern)` | Multiple: `No`
+<h3>Upload Port</h3>
 
 This option is used by “uploader” tool when sending firmware to board via `upload_port`. For example,
 
@@ -110,7 +108,7 @@ upload_port = COM[13]
 
 **Make sure that the platform is set to atmelavr and framework is set to arduino**
 
-## Authors
+<h2>Authors</h2>
 
 * **Omar Ben Brahim** - *Initial work*
 
