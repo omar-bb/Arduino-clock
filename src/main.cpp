@@ -1,7 +1,9 @@
-#include "Arduino.h"
-#include "clock.h"
+#include <Arduino.h>
+#include "LedMatrix.h"
+#include "Time.h"
 
-const unsigned char ref[11][16] = {
+const unsigned char ref[11][16] = 
+{
 	{0xFF,0xFF,0xC3,0x99,0x99,0x99,0x99,0x99,0x99,0x99,0x99,0x99,0x99,0xC3,0xFF,0xFF},
 	{0xFF,0xFF,0xF7,0xE7,0xD7,0xF7,0xF7,0xF7,0xF7,0xF7,0xF7,0xF7,0xF7,0xC1,0xFF,0xFF},
 	{0xFF,0xFF,0xFF,0xC3,0xBD,0xBD,0xBD,0xFD,0xFB,0xF7,0xEF,0xDF,0xBD,0x81,0xFF,0xFF},
@@ -18,16 +20,15 @@ const unsigned char ref[11][16] = {
 char time[9];
 unsigned char Word[128];
 
-RTC_DS3231 rtc;
+Time actTime;
+LedMatrix display;
 
-void setup() {
-
+void setup()
+{
 	Serial.begin(9600);
   	delay(3000);
 
-	rtc.begin();
-
-	rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+	actTime.SetTime();
 
 	pinMode(LEDARRAY_D, OUTPUT); 
 	pinMode(LEDARRAY_C, OUTPUT);
@@ -38,11 +39,12 @@ void setup() {
 	pinMode(LEDARRAY_CLK, OUTPUT);
 	pinMode(LEDARRAY_LAT, OUTPUT);
 
-	Clear_Display();
+	display.ClearDisplay();
 }
 
-void loop() {
-	GetTime((char*)&time, rtc);
-	TimeToHex(time, (unsigned char*)&Word, ref);
-	Display(Word);
+void loop() 
+{
+	actTime.GetTime((char*)&time);
+	actTime.TimeToHex(time, (unsigned char*)&Word, ref);
+	display.Display(Word);
 }
