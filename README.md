@@ -22,26 +22,6 @@ To compile and upload the code on to the arduino you have to install the platfor
 * PlatformIO Atom :
     - https://platformio.org/install/ide?install=atom
 
-## Built With
-
-* ### [Arduino](https://www.arduino.cc/)
-
-<img src="static/Arduino.png" width=50%>
-
-* ### Four (16x16 Matrix)
-
-<img src="static/Matrix.jpg" width=50%>
-
-* ### DS3231 For Pi
-
-<img src="static/DS3231.webp" width=50%>
-
-* ### [PlatformIO](https://platformio.org/)
-    - Arduino Platform an alternative for the basic ide 
-
-* ### [RTCLib](https://github.com/adafruit/RTClib)
-    - The DS3231 library
-
 ### Montage
 
 | Arduino   | 16*16 LED Matrix | DS3231 For Pi |
