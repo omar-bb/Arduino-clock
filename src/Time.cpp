@@ -1,16 +1,3 @@
-/**
- * @file Time.cpp
- *
- * @brief This message displayed in Doxygen Files index
- *
- * @ingroup PackageName
- * (Note: this needs exactly one @defgroup somewhere)
- *
- * @author Joe Smith
- * Contact: js@lsst.org
- *
- */
-
 #include "Time.h"
 
 void Time::InitializeRTC()
