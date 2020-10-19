@@ -2,10 +2,10 @@
 
 void LedMatrix::ClearDisplay() 
 {
-	unsigned char i,j;
+	unsigned char i;
 	for(i = 0 ; i < 32 ;i++) 
 	{	
-		_displaySwapBuffer[j][i] = 0xff;   
+		_displaySwapBuffer[0][i] = 0xff;   
 	}
 }
 
@@ -118,19 +118,18 @@ void LedMatrix::Send(unsigned char dat)
 
 	for(i = 0 ; i < 8 ; i++)
 	{
-		if (dat&0x01) 
-		{
-			digitalWrite(LEDARRAY_DI, HIGH);  
-		}
-		else 
-		{
+		if (dat&0x01)
+			digitalWrite(LEDARRAY_DI, HIGH);
+
+		else
 			digitalWrite(LEDARRAY_DI, LOW);
-		}
 
 		digitalWrite(LEDARRAY_CLK, HIGH);
 		delayMicroseconds(1);
+
 		digitalWrite(LEDARRAY_CLK, LOW);
-		delayMicroseconds(1);  
+		delayMicroseconds(1);
+		
 		dat >>= 1;
-	}    
+	}
 }
