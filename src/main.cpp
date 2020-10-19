@@ -2,7 +2,8 @@
 #include "LedMatrix.h"
 #include "Time.h"
 
-const unsigned char ref[11][16] = 
+// all the numbers and colon represented in a hexadecimal drawing
+const unsigned char ref[11][16] =
 {
 	{0xFF,0xFF,0xC3,0x99,0x99,0x99,0x99,0x99,0x99,0x99,0x99,0x99,0x99,0xC3,0xFF,0xFF},
 	{0xFF,0xFF,0xF7,0xE7,0xD7,0xF7,0xF7,0xF7,0xF7,0xF7,0xF7,0xF7,0xF7,0xC1,0xFF,0xFF},
@@ -28,7 +29,8 @@ void setup()
 	Serial.begin(9600);
   	delay(3000);
 
-	actTime.SetTime();
+	// initializing the rtc module
+	actTime.InitializeRTC();
 
 	pinMode(LEDARRAY_D, OUTPUT); 
 	pinMode(LEDARRAY_C, OUTPUT);
@@ -39,6 +41,7 @@ void setup()
 	pinMode(LEDARRAY_CLK, OUTPUT);
 	pinMode(LEDARRAY_LAT, OUTPUT);
 
+	// clearing the led matrix display
 	display.ClearDisplay();
 }
 
