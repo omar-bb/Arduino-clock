@@ -1,15 +1,29 @@
+/**
+ * @file Time.cpp
+ *
+ * @brief This message displayed in Doxygen Files index
+ *
+ * @ingroup PackageName
+ * (Note: this needs exactly one @defgroup somewhere)
+ *
+ * @author Joe Smith
+ * Contact: js@lsst.org
+ *
+ */
+
 #include "Time.h"
 
-void Time::SetTime()
+void Time::InitializeRTC()
 {
-    rtc.begin();
-    rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
+    _rtc.begin();
+    _rtc.adjust(DateTime(F(__DATE__), F(__TIME__)));
 }
 
 void Time::GetTime(char* sinput) 
 {
-	DateTime now = rtc.now();
+	DateTime now = _rtc.now();
 	
+	// adding a zero before the number if it has a length of 1
 	String h = (String(now.hour(), DEC).length() == 1) ? "0" + String(now.hour(), DEC) : String(now.hour(), DEC);
 	String m = (String(now.minute(), DEC).length() == 1) ? "0" + String(now.minute(), DEC) : String(now.minute(), DEC);
 	String s = (String(now.second(), DEC).length() == 1) ? "0" + String(now.second(), DEC) : String(now.second(), DEC);
@@ -21,17 +35,13 @@ void Time::GetTime(char* sinput)
 
 void Time::TimeToHex(char sinput[9], unsigned char* wordout, const unsigned char refTemp[11][16]) 
 {    
-    int counter = 0;
-    int ipos = 0;
-
-	for (int x = 0; x < 8; x++) 
+	for (int x = 0, j = 0; x < 8; x++, j+=16) 
 	{
-		ipos = (int)sinput[x] - 48;
+		int ipos = (int)sinput[x] - 48;
 
 		for (int k = 0; k < 16; k++) 
 		{
-			wordout[k + counter] = refTemp[ipos][k]; 
+			wordout[k + j] = refTemp[ipos][k]; 
 		}
-		counter += 16;
 	}
 }
