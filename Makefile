@@ -14,7 +14,15 @@ upload:
 
 ## Clean project (delete compiled objects)
 clean:
-	platformio run --target clean
+	platformio run --target cleanga
+
+## Upload firmware using programmer
+program:
+	platformio run --target program
+
+## Upload using filesystem
+uploadfs:
+	platformio run --target uploadfs
 
 ## Check or update installed PlatformIO Core packages
 update:
