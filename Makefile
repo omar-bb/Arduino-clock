@@ -1,42 +1,28 @@
 # Uncomment lines below if you have problems with $PATH
-#SHELL := /bin/bash
+SHELL := /bin/bash
 #PATH := /usr/local/bin:$(PATH)
 
-BLACK        := $(shell tput -Txterm setaf 0)
-RED          := $(shell tput -Txterm setaf 1)
-GREEN        := $(shell tput -Txterm setaf 2)
-YELLOW       := $(shell tput -Txterm setaf 3)
-LIGHTPURPLE  := $(shell tput -Txterm setaf 4)
-PURPLE       := $(shell tput -Txterm setaf 5)
-BLUE         := $(shell tput -Txterm setaf 6)
-WHITE        := $(shell tput -Txterm setaf 7)
+.DEFAULT_GOAL := show-help
 
-RESET := $(shell tput -Txterm sgr0)
-
-TARGET_COLOR := $(BLUE)
-
-.DEFAULT_GOAL := help
-
-help:
-	@echo "--------------------------------------------------------"
-	@echo "-----------${BLACK}:: ${GREEN}PlatformIO Makefile Commands${RESET} ${BLACK}::${RESET}-----------"
-	@echo "--------------------------------------------------------"
-	@grep -E '^[a-zA-Z_0-9%-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "${TARGET_COLOR}%-30s${RESET} %s\n", $$1, $$2}'
-
-run:       ## Process (build) all environments specified in “platformio.ini”
+## Process (build) all environments specified in “platformio.ini”
+run:
 	platformio run
 
-upload:    ## Build project and upload firmware to the all devices specified in “platformio.ini”
+## Build project and upload firmware to all the devices specified in “platformio.ini”
+upload:
 	platformio run --target upload
 
-clean:     ## Clean project (delete compiled objects)
+## Clean project (delete compiled objects)
+clean:
 	platformio run --target clean
 
-program:   ## Upload firmware using programmer (WARNING: Upload options like upload_port don’t work as expected with platformio run -t program)
-	platformio run --target program
-
-uploadfs:  ## Upload using filesystem
-	platformio run --target uploadfs
-
-update:    ## Check or update installed PlatformIO Core packages
+## Check or update installed PlatformIO Core packages
+update:
 	platformio update
+
+## Open the serial monitor
+serial-monitor:
+	platformio device monitor
+
+show-help:
+	@echo "$$(tput bold)Available rules:$$(tput sgr0)";echo;sed -ne"/^## /{h;s/.*//;:d" -e"H;n;s/^## //;td" -e"s/:.*//;G;s/\\n## /---/;s/\\n/ /g;p;}" ${MAKEFILE_LIST}|LC_ALL='C' sort -f|awk -F --- -v n=$$(tput cols) -v i=19 -v a="$$(tput setaf 6)" -v z="$$(tput sgr0)" '{printf"%s%*s%s ",a,-i,$$1,z;m=split($$2,w," ");l=n-i;for(j=1;j<=m;j++){l-=length(w[j])+1;if(l<= 0){l=n-i-length(w[j])-1;printf"\n%*s ",-i," ";}printf"%s ",w[j];}printf"\n";}'|more $(shell test $(shell uname) == Darwin && echo '-Xr')
