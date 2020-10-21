@@ -1,8 +1,20 @@
-# Arduino-clock
+# Arduino Clock
 
 [![Build Status](https://travis-ci.org/omar-bb/Arduino-clock.svg?branch=master)](https://travis-ci.org/github/omar-bb/Arduino-clock)
 
 An arduino clock with a 16x64 matrix and a DS3231 For Pi
+
+# Table of Contents
+
+- [Requirement](#requirement)
+- [Usage](#usage)
+  - [Build and upload with PlatformIO Core (CLI) using `make`](#build-and-upload-with-platformio-core-cli-using-make)
+  - [Build and upload with PlatformIO IDE](#build-and-upload-with-platformio-ide)
+- [Development](#development)
+- [Montage](#montage)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
 # Requirement
 
