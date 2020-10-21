@@ -14,7 +14,7 @@ upload:
 
 ## Clean project (delete compiled objects)
 clean:
-	platformio run --target cleanga
+	platformio run --target clean
 
 ## Upload firmware using programmer
 program:
