@@ -7,39 +7,43 @@ An arduino clock with a 16x64 matrix and a DS3231 For Pi
 # Requirement
 
 * Operating System:
+    
     - Windows, macOS, Linux, FreeBSD, Linux ARMv6+
 
 * Software requirements:
+    
     - [Python](https://www.python.org/downloads/) (3.5 or greater)
-    - PlatformIO Core (CLI) (you can either install it with an [Installer Script](https://docs.platformio.org/en/latest/core/installation.html#installer-script) or with the [Python Package Manager](https://docs.platformio.org/en/latest/core/installation.html#python-package-manager))
-    - **NOTE:** You do not need to install PlatformIO Core (CLI) if you are going to use [PlatformIO IDE](https://docs.platformio.org/en/latest/integration/ide/pioide.html#pioide) in VSCode or Atom
+
+    - PlatformIO Core (CLI) (You can install it with an [Installer Script](https://docs.platformio.org/en/latest/core/installation.html#installer-script) or a [Python Package Manager](https://docs.platformio.org/en/latest/core/installation.html#python-package-manager)) or [PlatformIO IDE](https://platformio.org/install)
+
+    > **NOTE:** PlatformIO Core provides a rich and documented Command Line Interface (CLI). The other PlatformIO-based software and IDEs are based on PlatformIO Core CLI, such as PlatformIO IDE. In other words, they wrap PlatformIO Core with own GUI.
+
+
 
 * Hardware requirements:
+    
     - [Arduino Uno](https://store.arduino.cc/arduino-uno-rev3)
+
     - 4 soldered [16x16 Dot LED Matrix Display](https://www.elabpeers.com/led-matrix-display.html)
+    
     - [DS3231 Real Time Clock Module for Raspberry Pi](https://www.pishop.us/product/ds3231-real-time-clock-module-for-raspberry-pi/)
 
 # Usage
 
-To get started clone this repo or download zip and extract on your local machine. To clone using git
+To get started clone this repository
 
 ```
 $ git clone https://github.com/omar-bb/Arduino-clock.git
 ```
 
-## Build and Upload
+## Build and upload with PlatformIO Core (CLI) using `make`
 
-To build this project and upload it to all the devices specified in “platformio.ini” run the following command
-
-```
+```bash
+# Build project and upload firmware to all the devices specified in “platformio.ini”
 $ make upload
 ```
 
-## Quick `make` guide
-
-You can run `make` to get all targets specifications
-
-![help](static/showhelp.png)
+![UploadDemo](img/makeupload.gif)
 
 # Montage
 
