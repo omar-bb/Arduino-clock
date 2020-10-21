@@ -36,8 +36,6 @@ $ git clone https://github.com/omar-bb/Arduino-clock.git
 
 ## Build and upload with PlatformIO Core (CLI) using `make`
 
-<img src="img/makeupload.gif" width="620">
-
 ```bash
 # Build project and upload firmware to all the devices specified in “platformio.ini”
 $ make upload
