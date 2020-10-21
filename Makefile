@@ -20,10 +20,6 @@ clean:
 program:
 	platformio run --target program
 
-## Upload using filesystem
-uploadfs:
-	platformio run --target uploadfs
-
 ## Check or update installed PlatformIO Core packages
 update:
 	platformio update
