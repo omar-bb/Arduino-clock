@@ -36,6 +36,8 @@ $ git clone https://github.com/omar-bb/Arduino-clock.git
 
 ## Build and upload with PlatformIO Core (CLI) using `make`
 
+using makefile
+
 ```bash
 # Build project and upload firmware to all the devices specified in “platformio.ini”
 $ make upload
@@ -52,11 +54,28 @@ To build and upload with PlatformIO IDE you just need to click on the upload but
 
 # Development
 
-TODO
+Here are some useful commands that you can use if you want to contribute to this project
+
+```bash
+# get all targets specifications
+$ make
+
+# Process (build) all environments specified in “platformio.ini”
+$ make run
+
+# Clean project (delete compiled objects)
+$ make clean
+
+# Check or update installed PlatformIO Core packages
+$ make update
+
+# Open the serial monitor
+$ make monitor
+```
 
 # Montage
 
-| Arduino   | 16*16 LED Matrix | DS3231 For Pi |
+| Arduino   | 16x16 LED Matrix | DS3231 For Pi |
 |-----------|------------------|---------------|
 | 5V        | +5V              | +5V           |
 | GND       | GND              | GND           |
