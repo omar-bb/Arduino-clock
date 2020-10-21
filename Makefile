@@ -25,7 +25,7 @@ update:
 	platformio update
 
 ## Open the serial monitor
-serial-monitor:
+monitor:
 	platformio device monitor
 
 show-help:
