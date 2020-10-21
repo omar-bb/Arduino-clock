@@ -18,8 +18,6 @@ An arduino clock with a 16x64 matrix and a DS3231 For Pi
 
     > **NOTE:** PlatformIO Core provides a rich and documented Command Line Interface (CLI). The other PlatformIO-based software and IDEs are based on PlatformIO Core CLI, such as PlatformIO IDE. In other words, they wrap PlatformIO Core with own GUI.
 
-
-
 * Hardware requirements:
     
     - [Arduino Uno](https://store.arduino.cc/arduino-uno-rev3)
@@ -38,12 +36,25 @@ $ git clone https://github.com/omar-bb/Arduino-clock.git
 
 ## Build and upload with PlatformIO Core (CLI) using `make`
 
+<img src="img/makeupload.gif" width="620">
+
 ```bash
 # Build project and upload firmware to all the devices specified in “platformio.ini”
 $ make upload
+
+# if you're using an Arduino ISP or any other programmer to program your arduino use the following command
+$ make program
 ```
 
-![UploadDemo](img/makeupload.gif)
+> NOTE: To use make in windows you need to get the Mingw64 toolchain
+
+## Build and upload with PlatformIO IDE
+
+To build and upload with PlatformIO IDE you just need to click on the upload button
+
+# Development
+
+TODO
 
 # Montage
 
