@@ -43,7 +43,7 @@ An arduino clock with a 16x64 matrix and a DS3231 For Pi
 To get started clone this repository
 
 ```
-$ git clone https://github.com/omar-bb/Arduino-clock.git
+$ git clone https://github.com/omar-bb/arduino-clock.git
 ```
 
 ## Build and upload with PlatformIO Core (CLI) using `make`
