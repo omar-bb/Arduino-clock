@@ -48,7 +48,7 @@ To get started clone this repository
 $ git clone https://github.com/omar-bb/arduino-clock.git
 ```
 
-## Build and upload with PlatformIO Core (CLI)
+* ## Build and upload with PlatformIO Core (CLI)
 
 ```bash
 # install project dependencies
@@ -62,7 +62,7 @@ $ platformio run --target upload
 $ platformio run --target program
 ```
 
-## Build and upload with PlatformIO IDE
+* ## Build and upload with PlatformIO IDE
 
 To build and upload with PlatformIO IDE you just need to click on the upload button
 
@@ -70,13 +70,13 @@ To build and upload with PlatformIO IDE you just need to click on the upload but
 
 If you want to contribute to this project here is a quick guide to help you use platformio awesome tools
 
-## Developing with PlatformIO Core (CLI)
+* ## Developing with PlatformIO Core (CLI)
 
 Before starting to develop with PlatformIO Core (CLI) it is better to have a virtual environment. See the "[Virtual Environment](https://docs.platformio.org/en/latest/core/installation.html#virtual-environment)" guide for more information
 
 Platformio provides all commands well documented in their official website. See "[CLI](https://docs.platformio.org/en/latest/core/userguide/index.html#cli-guide)" guide for more information
 
-## Developing with PlatformIO IDE
+* ## Developing with PlatformIO IDE
 
 With PlatformIO IDE installed in your favourite (IDE / Code Editor) you already have a nice gui interface to get started
 
