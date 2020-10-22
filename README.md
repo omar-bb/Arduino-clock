@@ -50,18 +50,15 @@ $ git clone https://github.com/omar-bb/arduino-clock.git
 
 ## Build and upload with PlatformIO Core (CLI)
 
-Before starting run the following command to install all project dependencies
-
 ```bash
 # install project dependencies
 $ platformio lib install
-```
 
-```bash
 # Build project and upload firmware to all the devices specified in “platformio.ini”
 $ platformio run --target upload
 
-# if you're using an Arduino ISP or any other programmer to program your arduino use the following command
+# if you're using an Arduino ISP or any other programmer to program your arduino
+# use this following command
 $ platformio run --target program
 ```
 
