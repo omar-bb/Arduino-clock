@@ -4,7 +4,7 @@
 
 An arduino clock with a 16x64 matrix and a DS3231 For Pi
 
-# Table of Contents
+## Table of Contents
 
 - [Requirement](#requirement)
 - [Usage](#usage)
@@ -18,7 +18,7 @@ An arduino clock with a 16x64 matrix and a DS3231 For Pi
 - [License](#license)
 - [Contact](#contact)
 
-# Requirement
+## Requirement
 
 * Operating System:
     
@@ -40,7 +40,7 @@ An arduino clock with a 16x64 matrix and a DS3231 For Pi
     
     - [DS3231 Real Time Clock Module for Raspberry Pi](https://www.pishop.us/product/ds3231-real-time-clock-module-for-raspberry-pi/)
 
-# Usage
+## Usage
 
 To get started clone this repository
 
@@ -48,7 +48,7 @@ To get started clone this repository
 $ git clone https://github.com/omar-bb/arduino-clock.git
 ```
 
-* ## Build and upload with PlatformIO Core (CLI)
+### Build and upload with PlatformIO Core (CLI)
 
 ```bash
 # install project dependencies
@@ -62,21 +62,21 @@ $ platformio run --target upload
 $ platformio run --target program
 ```
 
-* ## Build and upload with PlatformIO IDE
+### Build and upload with PlatformIO IDE
 
 To build and upload with PlatformIO IDE you just need to click on the upload button
 
-# Development
+## Development
 
 If you want to contribute to this project here is a quick guide to help you use platformio awesome tools
 
-* ## Developing with PlatformIO Core (CLI)
+### Developing with PlatformIO Core (CLI)
 
 Before starting to develop with PlatformIO Core (CLI) it is better to have a virtual environment. See the "[Virtual Environment](https://docs.platformio.org/en/latest/core/installation.html#virtual-environment)" guide for more information
 
 Platformio provides all commands well documented in their official website. See "[CLI](https://docs.platformio.org/en/latest/core/userguide/index.html#cli-guide)" guide for more information
 
-* ## Developing with PlatformIO IDE
+### Developing with PlatformIO IDE
 
 With PlatformIO IDE installed in your favourite (IDE / Code Editor) you already have a nice gui interface to get started
 
@@ -84,7 +84,7 @@ With PlatformIO IDE installed in your favourite (IDE / Code Editor) you already 
 
 > NOTE: you can do unit tests in the "test" folder see UNITTESTING.md
 
-# Montage
+## Montage
 
 | Arduino   | 16x16 LED Matrix | DS3231 For Pi |
 |-----------|------------------|---------------|
@@ -101,14 +101,14 @@ With PlatformIO IDE installed in your favourite (IDE / Code Editor) you already 
 | (I2C) SDA |                  | SDA           |
 | (I2C) SCL |                  | SCL           |
 
-# Contributing
+## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-# License
+## License
 
 Distributed under the MIT License. See [LICENSE.md](LICENSE.md) for more information.
 
-# Contact
+## Contact
 
 Omar Ben Brahim - [@omarbb44](https://twitter.com/omarbb44) - omar@ihub-bridge.org
