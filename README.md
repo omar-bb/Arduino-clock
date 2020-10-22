@@ -8,9 +8,11 @@ An arduino clock with a 16x64 matrix and a DS3231 For Pi
 
 - [Requirement](#requirement)
 - [Usage](#usage)
-  - [Build and upload with PlatformIO Core (CLI) using `make`](#build-and-upload-with-platformio-core-cli-using-make)
+  - [Build and upload with PlatformIO Core (CLI)](#build-and-upload-with-platformio-core-cli)
   - [Build and upload with PlatformIO IDE](#build-and-upload-with-platformio-ide)
 - [Development](#development)
+  - [Developing with PlatformIO Core (CLI)](#developing-with-platformio-core-cli)
+  - [Developing with PlatformIO IDE](#developing-with-platformio-ide)
 - [Montage](#montage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -46,19 +48,22 @@ To get started clone this repository
 $ git clone https://github.com/omar-bb/arduino-clock.git
 ```
 
-## Build and upload with PlatformIO Core (CLI) using `make`
+## Build and upload with PlatformIO Core (CLI)
 
-using makefile
+Before starting run the following command to install all project dependencies
+
+```bash
+# install project dependencies
+$ platformio lib install
+```
 
 ```bash
 # Build project and upload firmware to all the devices specified in “platformio.ini”
-$ make upload
+$ platformio run --target upload
 
 # if you're using an Arduino ISP or any other programmer to program your arduino use the following command
-$ make program
+$ platformio run --target program
 ```
-
-> NOTE: To use make in windows you need to get the Mingw64 toolchain
 
 ## Build and upload with PlatformIO IDE
 
@@ -66,24 +71,17 @@ To build and upload with PlatformIO IDE you just need to click on the upload but
 
 # Development
 
-Here are some useful commands that you can use if you want to contribute to this project
+## Developing with PlatformIO Core (CLI)
 
-```bash
-# get all targets specifications
-$ make
+Before starting to develop with PlatformIO Core (CLI) it is better to have a virtual environment. See the "[Virtual Environment](https://docs.platformio.org/en/latest/core/installation.html#virtual-environment)" guide for more information.
 
-# Process (build) all environments specified in “platformio.ini”
-$ make run
+Platformio provides all commands well documented in their official website. See "[CLI](https://docs.platformio.org/en/latest/core/userguide/index.html#cli-guide)" guide for more information.
 
-# Clean project (delete compiled objects)
-$ make clean
+## Developing with PlatformIO IDE
 
-# Check or update installed PlatformIO Core packages
-$ make update
+With PlatformIO IDE installed in your favourite (IDE / Code Editor) you already have a nice gui interface to get started
 
-# Open the serial monitor
-$ make monitor
-```
+> NOTE: use the test folder to make unit testing in it look at the UNITTESTING.md file
 
 # Montage
 
