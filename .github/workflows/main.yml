@@ -1,4 +1,4 @@
-name: arduino-clock
+name: build
 
 on: [push]
 

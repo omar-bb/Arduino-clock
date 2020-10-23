@@ -1,6 +1,6 @@
 # Arduino Clock
 
-[![Android-master Actions Status](https://github.com/omar-bb/arduino-clock/workflows/arduino-clock/badge.svg)](https://github.com/omar-bb/arduino-clock/actions)
+[![Android-master Actions Status](https://github.com/omar-bb/arduino-clock/workflows/build/badge.svg)](https://github.com/omar-bb/arduino-clock/actions)
 
 a digital clock with an arduino, 4 soldered 16x16 led matrix and a DS3231 For Pi
 
