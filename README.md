@@ -72,9 +72,9 @@ If you want to contribute to this project here is a quick guide to help you use 
 
 ### Developing with PlatformIO Core (CLI)
 
-Before starting to develop with PlatformIO Core (CLI) it is better to have a virtual environment. See the "[Virtual Environment](https://docs.platformio.org/en/latest/core/installation.html#virtual-environment)" guide for more information
+Before starting to develop with PlatformIO Core (CLI) it is better to have a virtual environment. See "[Virtual Environment](https://docs.platformio.org/en/latest/core/installation.html#virtual-environment)"
 
-Platformio provides all commands well documented in their official website. See "[CLI](https://docs.platformio.org/en/latest/core/userguide/index.html#cli-guide)" guide for more information
+Platformio provides all commands well documented in their official website. See "[CLI Guide](https://docs.platformio.org/en/latest/core/userguide/index.html#cli-guide)"
 
 ### Developing with PlatformIO IDE
 
