@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/omar-bb/Arduino-clock.svg?branch=master)](https://travis-ci.org/github/omar-bb/Arduino-clock)
 
-An arduino clock with a 16x64 matrix and a DS3231 For Pi
+a digital clock with an arduino, 4 soldered 16x16 led matrix and a DS3231 For Pi
 
 ## Table of Contents
 
