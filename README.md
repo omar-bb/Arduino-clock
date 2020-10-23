@@ -1,5 +1,7 @@
 # Arduino Clock
 
+[![Android-master Actions Status](https://github.com/omar-bb/arduino-clock/workflows/PlatformIO%20CI/badge.svg)](https://github.com/omar-bb/arduino-clock/actions)
+
 a digital clock with an arduino, 4 soldered 16x16 led matrix and a DS3231 For Pi
 
 ## Table of Contents
