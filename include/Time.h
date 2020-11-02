@@ -1,5 +1,8 @@
 #pragma once 
 
+#ifndef TIME_H
+#define TIME_H
+
 #include "RTClib.h"
 
 class Time
@@ -10,4 +13,4 @@ public:
     void TimeToHex(char sinput[9], unsigned char* wordout, const unsigned char refTemp[11][16]);
 private:
     RTC_DS3231 _rtc;
-};
+};#endif
