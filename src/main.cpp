@@ -2,7 +2,6 @@
 #include "LedMatrix.h"
 #include "Time.h"
 
-// all the numbers and colon represented in a hexadecimal drawing
 const unsigned char ref[11][16] =
 {
 	{0xFF,0xFF,0xC3,0x99,0x99,0x99,0x99,0x99,0x99,0x99,0x99,0x99,0x99,0xC3,0xFF,0xFF},
@@ -18,10 +17,9 @@ const unsigned char ref[11][16] =
 	{0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,0xE7,0xE7,0xFF,0xFF,0xFF,0xFF,0xE7,0xE7,0xFF,0xFF}
 };
 
-char time[9];
-unsigned char Word[128];
+RTC_DS3231 rtc;
 
-Time actTime;
+Time time(&rtc);
 LedMatrix display;
 
 void setup()
@@ -30,7 +28,7 @@ void setup()
   	delay(3000);
 
 	// initializing the rtc module
-	actTime.InitializeRTC();
+	time.InitializeRTC();
 
 	pinMode(LEDARRAY_D, OUTPUT); 
 	pinMode(LEDARRAY_C, OUTPUT);
@@ -47,7 +45,10 @@ void setup()
 
 void loop() 
 {
-	actTime.GetTime((char*)&time);
-	actTime.TimeToHex(time, (unsigned char*)&Word, ref);
+	char timeArr[9];
+	unsigned char Word[128];
+
+	time.GetTime((char*)&timeArr);
+	time.TimeToHex(timeArr, (unsigned char*)&Word, ref);
 	display.Display(Word);
 }
