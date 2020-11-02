@@ -1,5 +1,8 @@
 #pragma once
 
+#ifndef LEDMATRIX_H
+#define LEDMATRIX_H
+
 #include <Arduino.h>
 
 #define LEDARRAY_D 2
@@ -23,3 +26,5 @@ private:
     unsigned char _displayBuffer[8];
     unsigned char _displaySwapBuffer[1][32] = { { 0 } };
 };
+
+#endif
