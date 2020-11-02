@@ -2,41 +2,38 @@
 
 void LedMatrix::ClearDisplay() 
 {
-	unsigned char i;
-	for(i = 0 ; i < 32 ;i++) 
+	for(unsigned char i = 0 ; i < 32 ;i++) 
 	{	
-		_displaySwapBuffer[0][i] = 0xff;   
+		m_displaySwapBuffer[0][i] = 0xff;
 	}
 }
 
-void LedMatrix::Display(const unsigned char dat[4 * 32]) 
-{    
-	unsigned char i;
-
-	for(i = 0; i < 16; i++) 
+void LedMatrix::Display(const unsigned char dat[128])
+{
+	for(unsigned char i = 0; i < 16; i++) 
 	{
 		digitalWrite(LEDARRAY_G, HIGH);
 		
-		_displayBuffer[0] = dat[0*32+i];    
-		_displayBuffer[1] = dat[0*32+(i+16)];
+		m_displayBuffer[0] = dat[0*32+i];    
+		m_displayBuffer[1] = dat[0*32+(i+16)];
 
-		_displayBuffer[2] = dat[1*32+i];    
-		_displayBuffer[3] = dat[1*32+(i+16)];
+		m_displayBuffer[2] = dat[1*32+i];    
+		m_displayBuffer[3] = dat[1*32+(i+16)];
 
-		_displayBuffer[4] = dat[2*32+i];    
-		_displayBuffer[5] = dat[2*32+(i+16)];
+		m_displayBuffer[4] = dat[2*32+i];    
+		m_displayBuffer[5] = dat[2*32+(i+16)];
 
-		_displayBuffer[6] = dat[3*32+i];    
-		_displayBuffer[7] = dat[3*32+(i+16)];
+		m_displayBuffer[6] = dat[3*32+i];    
+		m_displayBuffer[7] = dat[3*32+(i+16)];
 
-		Send(_displayBuffer[7]);
-		Send(_displayBuffer[6]);
-		Send(_displayBuffer[5]);
-		Send(_displayBuffer[4]);
-		Send(_displayBuffer[3]);
-		Send(_displayBuffer[2]);
-		Send(_displayBuffer[1]);
-		Send(_displayBuffer[0]);
+		Send(m_displayBuffer[7]);
+		Send(m_displayBuffer[6]);
+		Send(m_displayBuffer[5]);
+		Send(m_displayBuffer[4]);
+		Send(m_displayBuffer[3]);
+		Send(m_displayBuffer[2]);
+		Send(m_displayBuffer[1]);
+		Send(m_displayBuffer[0]);
 		
 		digitalWrite(LEDARRAY_LAT, HIGH);
 		delayMicroseconds(1);
@@ -109,18 +106,16 @@ void LedMatrix::ScanLine(unsigned char m)
 }
 
 void LedMatrix::Send(unsigned char dat) 
-{  
-	unsigned char i;
+{
 	digitalWrite(LEDARRAY_CLK, LOW);
 	delayMicroseconds(1); 
 	digitalWrite(LEDARRAY_LAT, LOW);
 	delayMicroseconds(1);
 
-	for(i = 0 ; i < 8 ; i++)
+	for(unsigned char i = 0 ; i < 8 ; i++)
 	{
 		if (dat&0x01)
 			digitalWrite(LEDARRAY_DI, HIGH);
-
 		else
 			digitalWrite(LEDARRAY_DI, LOW);
 
