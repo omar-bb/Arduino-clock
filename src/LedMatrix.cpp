@@ -1,5 +1,5 @@
 #include "LedMatrix.h"
-
+ 
 void LedMatrix::ClearDisplay() 
 {
 	for(unsigned char i = 0 ; i < 32 ;i++) 

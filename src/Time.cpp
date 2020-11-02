@@ -8,7 +8,7 @@ void Time::InitializeRTC()
 
 // parameter : char* sinput
 void Time::GetTime(char* sinput) 
-{
+{ 
 	DateTime now = m_rtc->now();
 	
 	// adding a zero before the number if it has a length of 1
