@@ -12,7 +12,6 @@ public:
 		: m_rtc(rtc) {}
 
 	void InitializeRTC();
-	// parameter : char* sinput
 	void GetTime(char* sinput);
 	void TimeToHex(char sinput[9], unsigned char* wordout, const unsigned char refTemp[11][16]);
 
