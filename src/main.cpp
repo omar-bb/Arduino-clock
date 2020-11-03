@@ -46,9 +46,9 @@ void setup()
 void loop()
 {
 	char timeArr[9];
-	unsigned char Word[128];
+	unsigned char word[128];
 
 	time.GetTime((char*)&timeArr);
-	time.TimeToHex(timeArr, (unsigned char*)&Word, ref);
-	display.Display(Word);
+	time.TimeToHex(timeArr, (unsigned char*)&word, ref);
+	display.Display(word);
 }
