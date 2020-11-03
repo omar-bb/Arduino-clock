@@ -1,6 +1,5 @@
 .pio
 .clang_complete
-.clang-format
 .gcc-flags.json
 .ccls
 .vscode
