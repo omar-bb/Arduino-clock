@@ -13,11 +13,11 @@ void Time::GetTime(char *sinput)
 
 	// adding a zero before the number if it has a length of 1
 	String h = (String(now.hour(), DEC).length() == 1) ? "0" + String(now.hour(), DEC)
-	                                                   : String(now.hour(), DEC);
+													   : String(now.hour(), DEC);
 	String m = (String(now.minute(), DEC).length() == 1) ? "0" + String(now.minute(), DEC)
-	                                                     : String(now.minute(), DEC);
+														 : String(now.minute(), DEC);
 	String s = (String(now.second(), DEC).length() == 1) ? "0" + String(now.second(), DEC)
-	                                                     : String(now.second(), DEC);
+														 : String(now.second(), DEC);
 
 	String timeRTC = h + ":" + m + ":" + s;
 
@@ -31,6 +31,6 @@ void Time::TimeToHex(char sinput[9], unsigned char *wordout, const unsigned char
 		int ipos = (int)sinput[x] - 48;
 
 		for (int k = 0; k < 16; k++)
-            wordout[k + j] = refTemp[ipos][k];
+			wordout[k + j] = refTemp[ipos][k];
 	}
 }
