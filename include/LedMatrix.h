@@ -2,7 +2,7 @@
 
 #ifndef LEDMATRIX_H
 #define LEDMATRIX_H
- 
+
 #include <Arduino.h>
 
 #define LEDARRAY_D 2

@@ -1,7 +1,7 @@
 #include <Arduino.h>
 #include "LedMatrix.h"
 #include "Time.h"
- 
+
 const unsigned char ref[11][16] =
 {
 	{0xFF,0xFF,0xC3,0x99,0x99,0x99,0x99,0x99,0x99,0x99,0x99,0x99,0x99,0xC3,0xFF,0xFF},
@@ -30,7 +30,7 @@ void setup()
 	// initializing the rtc module
 	time.InitializeRTC();
 
-	pinMode(LEDARRAY_D, OUTPUT); 
+	pinMode(LEDARRAY_D, OUTPUT);
 	pinMode(LEDARRAY_C, OUTPUT);
 	pinMode(LEDARRAY_B, OUTPUT);
 	pinMode(LEDARRAY_A, OUTPUT);
@@ -43,7 +43,7 @@ void setup()
 	display.ClearDisplay();
 }
 
-void loop() 
+void loop()
 {
 	char timeArr[9];
 	unsigned char Word[128];

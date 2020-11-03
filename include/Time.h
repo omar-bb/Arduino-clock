@@ -1,15 +1,15 @@
-#pragma once 
+#pragma once
 
 #ifndef TIME_H
 #define TIME_H
- 
+
 #include "RTClib.h"
 
 class Time
 {
 public:
-    Time(RTC_DS3231* rtc) :
-        m_rtc(rtc) {}
+    Time(RTC_DS3231* rtc)
+        : m_rtc(rtc) {}
 
     void InitializeRTC();
     // parameter : char* sinput
