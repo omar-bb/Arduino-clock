@@ -8,11 +8,11 @@ a digital clock with an arduino, 4 soldered 16x16 led matrix and a DS3231 For Pi
 
 - [Requirement](#requirement)
 - [Usage](#usage)
-  - [Build and upload with PlatformIO Core (CLI)](#build-and-upload-with-platformio-core-cli)
-  - [Build and upload with PlatformIO IDE](#build-and-upload-with-platformio-ide)
+	- [Build and upload with PlatformIO Core (CLI)](#build-and-upload-with-platformio-core-cli)
+	- [Build and upload with PlatformIO IDE](#build-and-upload-with-platformio-ide)
 - [Development](#development)
-  - [Developing with PlatformIO Core (CLI)](#developing-with-platformio-core-cli)
-  - [Developing with PlatformIO IDE](#developing-with-platformio-ide)
+	- [Developing with PlatformIO Core (CLI)](#developing-with-platformio-core-cli)
+	- [Developing with PlatformIO IDE](#developing-with-platformio-ide)
 - [Montage](#montage)
 - [Contributing](#contributing)
 - [License](#license)
@@ -21,24 +21,24 @@ a digital clock with an arduino, 4 soldered 16x16 led matrix and a DS3231 For Pi
 ## Requirement
 
 * Operating System:
-    
-    - Windows, macOS, Linux, FreeBSD, Linux ARMv6+
+
+	- Windows, macOS, Linux, FreeBSD, Linux ARMv6+
 
 * Software requirements:
-    
-    - [Python](https://www.python.org/downloads/) (3.5 or greater)
 
-    - PlatformIO Core (CLI) (You can install it with an [Installer Script](https://docs.platformio.org/en/latest/core/installation.html#installer-script) or a [Python Package Manager](https://docs.platformio.org/en/latest/core/installation.html#python-package-manager)) or [PlatformIO IDE](https://platformio.org/install)
+	- [Python](https://www.python.org/downloads/) (3.5 or greater)
 
-    - > **NOTE:** PlatformIO Core provides a rich and documented Command Line Interface (CLI). The other PlatformIO-based software and IDEs are based on PlatformIO Core CLI, such as PlatformIO IDE. In other words, they wrap PlatformIO Core with own GUI.
+	- PlatformIO Core (CLI) (You can install it with an [Installer Script](https://docs.platformio.org/en/latest/core/installation.html#installer-script) or a [Python Package Manager](https://docs.platformio.org/en/latest/core/installation.html#python-package-manager)) or [PlatformIO IDE](https://platformio.org/install)
+
+	- > **NOTE:** PlatformIO Core provides a rich and documented Command Line Interface (CLI). The other PlatformIO-based software and IDEs are based on PlatformIO Core CLI, such as PlatformIO IDE. In other words, they wrap PlatformIO Core with own GUI.
 
 * Hardware requirements:
-    
-    - [Arduino Uno](https://store.arduino.cc/arduino-uno-rev3)
 
-    - 4 soldered [16x16 Dot LED Matrix Display](https://www.elabpeers.com/led-matrix-display.html)
-    
-    - [DS3231 Real Time Clock Module for Raspberry Pi](https://www.pishop.us/product/ds3231-real-time-clock-module-for-raspberry-pi/)
+	- [Arduino Uno](https://store.arduino.cc/arduino-uno-rev3)
+
+	- 4 soldered [16x16 Dot LED Matrix Display](https://www.elabpeers.com/led-matrix-display.html)
+
+	- [DS3231 Real Time Clock Module for Raspberry Pi](https://www.pishop.us/product/ds3231-real-time-clock-module-for-raspberry-pi/)
 
 ## Usage
 

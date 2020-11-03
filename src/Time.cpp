@@ -2,8 +2,8 @@
 
 void Time::InitializeRTC()
 {
-    m_rtc->begin();
-    m_rtc->adjust(DateTime(F(__DATE__), F(__TIME__)));
+	m_rtc->begin();
+	m_rtc->adjust(DateTime(F(__DATE__), F(__TIME__)));
 }
 
 // parameter : char* sinput

@@ -46,7 +46,7 @@ void LedMatrix::Display(const unsigned char dat[128])
 		digitalWrite(LEDARRAY_G, LOW);
 
 		delayMicroseconds(300);
-    }
+	}
 }
 
 void LedMatrix::ScanLine(unsigned char m)

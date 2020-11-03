@@ -25,7 +25,7 @@ LedMatrix display;
 void setup()
 {
 	Serial.begin(9600);
-  	delay(3000);
+	delay(3000);
 
 	// initializing the rtc module
 	time.InitializeRTC();
