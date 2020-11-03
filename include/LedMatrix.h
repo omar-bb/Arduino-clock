@@ -23,7 +23,6 @@ public:
 	void Send(unsigned char dat);
 
 private:
-	// Display_Buffer / Display_Swap_Buffer
 	unsigned char m_displayBuffer[8];
 	unsigned char m_displaySwapBuffer[1][32] = {{0}};
 };

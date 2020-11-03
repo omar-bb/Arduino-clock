@@ -27,7 +27,6 @@ void setup()
 	Serial.begin(9600);
 	delay(3000);
 
-	// initializing the rtc module
 	time.InitializeRTC();
 
 	pinMode(LEDARRAY_D, OUTPUT);
@@ -39,7 +38,6 @@ void setup()
 	pinMode(LEDARRAY_CLK, OUTPUT);
 	pinMode(LEDARRAY_LAT, OUTPUT);
 
-	// clearing the led matrix display
 	display.ClearDisplay();
 }
 
