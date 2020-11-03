@@ -17,15 +17,15 @@
 class LedMatrix
 {
 public:
-    void ClearDisplay();
-    void Display(const unsigned char dat[4 * 32]);
-    void ScanLine(unsigned char m);
-    void Send(unsigned char dat);
+	void ClearDisplay();
+	void Display(const unsigned char dat[4 * 32]);
+	void ScanLine(unsigned char m);
+	void Send(unsigned char dat);
 
 private:
-    // Display_Buffer / Display_Swap_Buffer
-    unsigned char m_displayBuffer[8];
-    unsigned char m_displaySwapBuffer[1][32] = { { 0 } };
+	// Display_Buffer / Display_Swap_Buffer
+	unsigned char m_displayBuffer[8];
+	unsigned char m_displaySwapBuffer[1][32] = { { 0 } };
 };
 
 #endif
